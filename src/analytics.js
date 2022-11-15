@@ -10,7 +10,7 @@ function createAnalytics() {
       document.removeEventListener('click', listener);
     },
     getClicks() {
-      if (isDestroyed) return 'Analitics is derstroyed';
+      if (isDestroyed) return 'Analitics is derstroyed!';
       return counter;
     },
   };
