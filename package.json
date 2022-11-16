@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "webpack --mode development",
+    "dev:watch": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -24,7 +25,9 @@
   "homepage": "https://github.com/tocs77/webpack-ce#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.2",
     "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0"
   }
