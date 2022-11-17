@@ -1,7 +1,13 @@
+import $ from 'jquery';
+
 function createAnalytics() {
   let counter = 0;
   let isDestroyed = false;
-  const listener = () => counter++;
+  let display = $('#disp');
+  const listener = () => {
+    counter++;
+    display.html(counter);
+  };
   document.addEventListener('click', listener);
 
   return {

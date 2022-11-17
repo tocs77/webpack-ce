@@ -10,6 +10,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'static/images/[hash][ext][query]',
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   plugins: [new HTMLWebpackPlugin({ template: './index.html' }), new CleanWebpackPlugin()],
   module: {
     rules: [
@@ -18,7 +23,15 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg|jpeg)$/,
+        test: /\.xml$/,
+        use: ['xml-loader'],
+      },
+      {
+        test: /\.csv$/,
+        use: ['csv-loader'],
+      },
+      {
+        test: /\.(png|jpg|jpeg|ttf)$/,
         type: 'asset/resource',
       },
     ],
